@@ -26,13 +26,17 @@ var intervalId;
 // QUIZ FUNCTIONS
 
 // start function
-var pageLoad = () =>{
-  var startButton = document.createElement("button");
-  startButton.textContent = "Begin";
-  startButton.setAttribute("class", "start-button");
-  startEl.appendChild(startButton);
-};
 
+//we need to reveal the first question
+function pageLoad() {
+  // First function to execute
+      var startButton = document.createElement("button");
+      startButton.textContent = "Start";
+      startButton.setAttribute("class", "start-button")
+      startEl.appendChild(startButton)
+      
+    };
+  
 
 function endQuiz() {
   clearInterval(intervalId);
@@ -96,8 +100,14 @@ function checkAnswer(event) {
   setTimeout(nextQuestion, 2000);
 }
 
-renderQuestion();
-optionListEl.addEventListener("click", checkAnswer);
+
 
 //When the page first loads.
 pageLoad();
+
+// shows first question after click
+var startButton = document.querySelector(".start-button");
+startButton.addEventListener("click", renderQuestion);
+
+// Checks for when a list option is selected 
+optionListEl.addEventListener("click", checkAnswer);

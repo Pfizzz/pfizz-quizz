@@ -29,7 +29,8 @@ var questions = [
   var optionListEl = document.querySelector("#option-list");
   var questionResultEl = document.querySelector("#question-result");
   var timerEl = document.querySelector("#timer");
-  
+  var changeQuestion = document.queryselector("#change-question");
+    
   var questionIndex = 0;
   var correctCount = 0;
   
