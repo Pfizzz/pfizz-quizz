@@ -45,6 +45,7 @@ function pageLoad() {
     startButton.textContent = "Start";
     startButton.setAttribute("class", "start-button")
     startEl.appendChild(startButton)
+
   };
 
 

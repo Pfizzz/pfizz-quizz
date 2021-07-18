@@ -32,9 +32,16 @@ function pageLoad() {
   // First function to execute
       var startButton = document.createElement("button");
       startButton.textContent = "Start";
-      startButton.setAttribute("class", "start-button")
+      startButton.setAttribute("class", "start-button");
+      startButton.setAttribute("id", "startId");
+
       startEl.appendChild(startButton)
-      
+      var start = document.getElementById("startId");
+      // 
+      start.style.backgroundColor = "red";
+
+
+     
     };
   
 
